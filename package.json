@@ -1,5 +1,5 @@
 {
-  "name": "@lemonadejs/datagridreact",
+  "name": "@lemonadejs/react-data-grid",
   "title": "React Data Grid component using LemonadeJS",
   "description": "The React data grid component using LemonadeJS is a lightweight and flexible tool that allows developers to create dynamic and interactive tables on web pages. The component supports dynamic data loading, sorting, filtering, and pagination, making it easy for users to find the information they need quickly. It is highly customizable, allowing developers to configure the appearance and behavior of the table to suit their needs. LemonadeJS data grid component is easy to integrate into existing web applications and is compatible with all major web browsers.",
   "version": "1.0.0",
@@ -20,7 +20,7 @@
     "react"
   ],
   "dependencies": {
-    "@lemonadejs/datagrid": "^1.0.2",
+    "@lemonadejs/datagrid": "^1.0.4",
     "lemonadejs": "^3.2.0"
   },
   "scripts": {
