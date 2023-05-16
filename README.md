@@ -18,7 +18,7 @@ For more information, please check the DataGridLM page.
 To install your project using npm, run the following command:
 
 ```bash
-$ npm install @lemonadejs/datagrid-react
+$ npm install @lemonadejs/react-data-grid
 ```
 
 ### Usage
@@ -27,11 +27,19 @@ In a React Component, you can directly call the Datagrid within the JSX by passi
 
 ```javascript
 import React, { useState, useRef } from 'react'
-import Datagrid from '@lemonadejs/datagrid-react'
+import Datagrid from '@lemonadejs/react-data-grid'
 
 function Component() {
-    const [data, setData] = useState([{ name: 'The Last of Us 2', releaseDate: '2022' }, { name: 'West World', releaseDate: '2017' }])
-    const [columns, setColumns] = useState([{ name: 'name', headerName: 'Title' }, { name: 'releaseDate', headerName: 'Release Date' }])
+    const [data, setData] = useState([
+            { name: 'The Last of Us 2', releaseDate: '2022' },
+            { name: 'West World', releaseDate: '2017' }
+        ])
+
+    const [columns, setColumns] = useState([
+            { name: 'name', headerName: 'Title' },
+            { name: 'releaseDate', headerName: 'Release Date' }
+        ])
+
     const datagridRef = useRef()
 
     return (
@@ -56,4 +64,9 @@ DataGridLM-React is an open source project and contributions are welcome! If you
 
 ## License
 
-DataGridLM is released under the MIT.
+DataGridLM-React is released under the MIT.
+
+## Other Tools
+
+- [jSuites](https://jsuites.net/v4/)
+- [Jspreadsheet](https://jspreadsheet.com)
