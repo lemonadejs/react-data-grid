@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# DataGridLM-React
+[Official website and documentation is here](https://lemonadejs.net/components/datagrid)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the React version of [Lemon Datagrid](https://github.com/lemonadejs/data-grid). This project makes DataGridLM usable in React.
+For more information, please check the DataGridLM page.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+-   Lightweight: DataGridLM is only about 5 Kbytes in size, making it fast and easy to load.
+-   Customizable: You can define columns and user-defined actions to suit your specific use case.
+-   Reactive: Any changes to the underlying data are automatically applied to the HTML, making it easy to keep your grid up-to-date.
+-   Integration: DataGridLM can be used as a standalone library or integrated with LemonadeJS or React.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### npm Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To install your project using npm, run the following command:
 
-### `npm test`
+```bash
+$ npm install @lemonadejs/datagrid-react
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Usage
 
-### `npm run build`
+In a React Component, you can directly call the Datagrid within the JSX by passing the **options** as props, along with the element's **ref**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```javascript
+import React, { useState, useRef } from 'react'
+import Datagrid from '@lemonadejs/datagrid-react'
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+function Component() {
+    const [data, setData] = useState([{ name: 'The Last of Us 2', releaseDate: '2022' }, { name: 'West World', releaseDate: '2017' }])
+    const [columns, setColumns] = useState([{ name: 'name', headerName: 'Title' }, { name: 'releaseDate', headerName: 'Release Date' }])
+    const datagridRef = useRef()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    return (
+        <div>
+            <Datagrid data={data} columns={columns} ref={datagridRef} />
+        </div>
+    )
+}
+```
 
-### `npm run eject`
+### Examples
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Here are a few examples of DataGridLM in action:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   [Basic Data Grid Example](https://lemonadejs.net/components/datagrid#example-1)
+-   [Example with Large Data Sets](https://lemonadejs.net/components/datagrid#example-2)
+-   [Example with Data Addition and Deletion](https://lemonadejs.net/components/datagrid#example-3)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+DataGridLM-React is an open source project and contributions are welcome! If you find a bug or have a feature request, please open an issue on GitHub. If you'd like to contribute code, please fork the repository and submit a pull request.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+DataGridLM is released under the MIT.
