@@ -15,7 +15,7 @@ const DatagridReact = React.forwardRef((props, mainReference) => {
                 mainReference.current.pagination = props.current.pagination
             }
             if (mainReference.current.search != props.current.search) {
-                mainReference.current.search = props.current.pagination
+                mainReference.current.search = props.current.search
             } 
             mainReference.current.loadPages()
         } else {
